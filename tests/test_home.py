@@ -5,7 +5,7 @@ from selene import have
 
 
 def test_web_d():
-    browser.open('automation-practice-form')
+    browser.open('https://demoqa.com/automation-practice-form')
     browser.element('#firstName').type('Anton')
     browser.element('#lastName').type('Fomin')
     browser.element('#userEmail').type('catman@mail.ru')
@@ -35,3 +35,6 @@ def test_web_d():
         'sun.jpg',
         'Krasnodar',
         'NCR Delhi'))
+
+
+test_web_d()
