@@ -4,8 +4,8 @@ from selene.support.shared import browser
 from selene import have
 
 
-def test_web_d():
-    browser.open('/automation-practice-form')
+def test_web():
+    browser.open('/')
     browser.element('#firstName').type('Anton')
     browser.element('#lastName').type('Fomin')
     browser.element('#userEmail').type('catman@mail.ru')
@@ -35,4 +35,5 @@ def test_web_d():
         'sun.jpg',
         'Krasnodar',
         'NCR Delhi'))
+
 
