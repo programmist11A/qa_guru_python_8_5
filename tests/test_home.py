@@ -1,17 +1,16 @@
 import os
 
-from selene.support.shared import browser
-from selene import have
+from selene import browser, have
 
 
 def test_web():
-    browser.open('/')
+    browser.open('/automation-practice-form')
     browser.element('#firstName').type('Anton')
     browser.element('#lastName').type('Fomin')
     browser.element('#userEmail').type('catman@mail.ru')
     browser.element('[for="gender-radio-3"]').click()
     browser.element('#userNumber').type('9694840725')
-    browser.element('#dateOfBirth').click()
+    browser.element('#dateOfBirthInput').click()
     browser.element(".react-datepicker__month-select").click().element('option[value="1"]').click()
     browser.element(".react-datepicker__year-select").click().element('[value="1989"]').click()
     browser.element(".react-datepicker__day--019").click()
@@ -35,5 +34,4 @@ def test_web():
         'sun.jpg',
         'Krasnodar',
         'NCR Delhi'))
-
 
